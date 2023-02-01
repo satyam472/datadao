@@ -1,6 +1,15 @@
 import React from 'react';
 import '../../App.css';
+import Cards from '../CardsAll';
+import Footer from '../Footer';
 
-export default function Dashboard() {
-  return <h1 className='services'>Dashboard</h1>;
+function Dashboard() {
+  return (
+    <>
+      <Cards />
+      <Footer />
+    </>
+  );
 }
+
+export default Dashboard;
