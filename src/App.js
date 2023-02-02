@@ -12,6 +12,7 @@ import MyCourses from "./components/pages/MyCourses"
 
 import courseDetails from './components/pages/courseDetails'
 
+
 function App() {
   return (
     <>

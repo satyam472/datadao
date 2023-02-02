@@ -8,14 +8,14 @@ function Dashboard() {
   return (
     <>
       <div className="text-center sticky-top container-fluid bg-dark text-white">
-      <h2 className='mt-3'>Publish Your Courses!</h2>
+        <h2 className='mt-3'>Publish Your Courses!</h2>
         <Link to='/add-courses'>
           <button className='btn mt-3' style={{ background: "white", color: "black", marginRight: "10px", cursor: "pointer", marginBottom: "10px" }}>
             Add Course
           </button>
         </Link>
-{/* 
-        <Link to='/add-videos'>
+
+        {/* <Link to='/add-videos'>
           <button className='btn mt-3' style={{ background: "black", color: "white", marginRight: "10px", cursor: "pointer", marginBottom: "10px" }}>
             Add Videos
           </button>
