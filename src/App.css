@@ -42,3 +42,12 @@
   color: #fff;
   font-size: 100px;
 }
+.addCourseForm{
+  margin: 30px 150px 30px 150px;
+  padding: 30px 30px 30px 30px;
+  border: 2px solid black;
+  border-radius: 16px;
+  background-color: #f7f7f7;
+  background: fixed;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}

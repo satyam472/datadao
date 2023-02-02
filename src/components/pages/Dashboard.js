@@ -14,8 +14,8 @@ function Dashboard() {
             Add Course
           </button>
         </Link>
-
-        {/* <Link to='/add-videos'>
+{/* 
+        <Link to='/add-videos'>
           <button className='btn mt-3' style={{ background: "black", color: "white", marginRight: "10px", cursor: "pointer", marginBottom: "10px" }}>
             Add Videos
           </button>
