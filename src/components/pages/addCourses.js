@@ -4,9 +4,17 @@ import {useForm} from 'react-hook-form';
 const addCourses = () => {
     // const[formDetail,setformDetail] = useState([]);
 
-    handleSubmit = (data)=>{
+    onSubmit = (data)=>{
         console.log(data)
     }
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors }
+      } = useForm();
+    
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>

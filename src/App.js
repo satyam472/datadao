@@ -7,11 +7,10 @@ import Dashboard from './components/pages/Dashboard';
 import SignUp from './components/pages/SignUp';
 import addCourses from './components/pages/addCourses';
 import addVideos from './components/pages/addVideos';
-<<<<<<< HEAD
+
 import MyCourses from "./components/pages/MyCourses"
-=======
+
 import courseDetails from './components/pages/courseDetails'
->>>>>>> 3b8bbd9831c87afc637d00180ab6ac8c75805fa3
 
 function App() {
   return (
