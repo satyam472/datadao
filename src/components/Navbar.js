@@ -1,28 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -37,7 +22,7 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/' style={{textDecoration:"none"}} className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
@@ -46,6 +31,7 @@ function Navbar() {
                 to='/Dashboard'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                style={{textDecoration:"none"}}
               >
                 Dashboard
               </Link>
@@ -60,8 +46,12 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-          {button && <Button buttonStyle='btn--outline'>Connect Wallet</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline'>Connect Wallet</Button>} */}
+          <Link to='/sign-up'>
+          <button type="button" className="mb-2 mr-3 btn btn-light">Sign Up</button>
+          </Link>
+          <button type="button" className="mb-2 btn btn-light">Connect Metamask</button>
         </div>
       </nav>
     </>
