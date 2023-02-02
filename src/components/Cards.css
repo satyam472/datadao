@@ -1,5 +1,16 @@
+.created_cards {
+  padding: 4rem 4rem 0rem 4rem;
+  background: #fff;
+  margin-bottom: 0px !important;
+}
 .cards {
   padding: 4rem;
+  background: #fff;
+}
+
+.purchased_cards {
+  margin-top: 0px !important;
+  padding: 0rem 4rem 4rem 4rem;
   background: #fff;
 }
 

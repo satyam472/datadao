@@ -50,6 +50,15 @@ function Navbar() {
                 Dashboard
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/My_Courses'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                My_Courses
+              </Link>
+            </li>
             <li>
               <Link
                 to='/sign-up'

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 
-function Cards() {
+function MyCourses() {
   const[courses,setCourses] = useState([]); 
 
   const fetchCardDetails = async()=>{
@@ -23,29 +23,57 @@ function Cards() {
   }, []);
 
   return (
-    <div className='cards'>
-      <h1>Check out these Featured Courses!</h1>
-      <div className='cards__container'>
-        <div className='cards__wrapper'>
-          <ul className='cards__items'>
-            {
-              courses.map((course,index)=>(
-                <CardItem
-                  src= {course.image}
-                  title = {course.course_name}
-                  des= {course.tutor_name}
-                  path='/dashboard'
-                />
-              ))
-            }
-          </ul>
+    <>
+    <div className='row'>
+        <div className='col col-md-12'>
+            <div className='created_cards'>
+        <h1>Courses you created</h1>
+        <div className='cards__container'>
+            <div className='cards__wrapper'>
+            <ul className='cards__items'>
+                {
+                courses.map((course,index)=>(
+                    <CardItem
+                    src= {course.image}
+                    title = {course.course_name}
+                    des= {course.tutor_name}
+                    path='/dashboard'
+                    />
+                ))
+                }
+            </ul>
+            </div>
         </div>
-      </div>
+            </div>
+        </div>
+        <div className='col col-md-12'>
+            <div className='purchased_cards'>
+        <h1>Courses you purchased</h1>
+        <div className='cards__container'>
+            <div className='cards__wrapper'>
+            <ul className='cards__items'>
+                {
+                courses.map((course,index)=>(
+                    <CardItem
+                    src= {course.image}
+                    title = {course.course_name}
+                    des= {course.tutor_name}
+                    path='/dashboard'
+                    />
+                ))
+                }
+            </ul>
+            </div>
+        </div>
+            </div>
+        </div>
     </div>
+
+    </>
   );
 }
 
-export default Cards;
+export default MyCourses;
 
 
 {/* <div className='cards'>
