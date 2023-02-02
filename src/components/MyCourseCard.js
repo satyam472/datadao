@@ -3,9 +3,10 @@ import './Cards.css';
 import CardItem from './CardItem';
 
 function MyCourses() {
-  const[courses,setCourses] = useState([]); 
+  const[purchasedCourses,setpurchasedCourses] = useState([]); 
+  const[CreatedCourses,setCreatedCourses] = useState([]); 
 
-  const fetchCardDetails = async()=>{
+  const fetchPurchasedCardDetails = async()=>{
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -15,11 +16,24 @@ function MyCourses() {
     const tempdata = await response.json();
     // const data = tempdata.map(JSON.parse);
     console.log(tempdata.response);
-    setCourses(tempdata.response);
+    setpurchasedCourses(tempdata.response);
+  }
+  const fetchCreatedCardDetails = async()=>{
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    };
+    const response = await fetch("http://localhost:4000/course/getAllCourse",requestOptions);
+    console.log(response)
+    const tempdata = await response.json();
+    // const data = tempdata.map(JSON.parse);
+    console.log(tempdata.response);
+    setCreatedCourses(tempdata.response);
   }
 
   useEffect(() => {
-    fetchCardDetails()
+    fetchPurchasedCardDetails()
+    fetchCreatedCardDetails()
   }, []);
 
   return (
@@ -32,7 +46,7 @@ function MyCourses() {
             <div className='cards__wrapper'>
             <ul className='cards__items'>
                 {
-                courses.map((course,index)=>(
+                CreatedCourses.map((course,index)=>(
                     <CardItem
                     src= {course.image}
                     title = {course.course_name}
@@ -53,7 +67,7 @@ function MyCourses() {
             <div className='cards__wrapper'>
             <ul className='cards__items'>
                 {
-                courses.map((course,index)=>(
+                purchasedCourses.map((course,index)=>(
                     <CardItem
                     src= {course.image}
                     title = {course.course_name}
