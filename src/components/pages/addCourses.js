@@ -11,6 +11,7 @@ const AddCourses = () => {
 
     const onSubmit = (data)=>{
         data.image_url=data.image_url[0]
+        data.tutor_icon=data.tutor_icon[0]
         data.image="https://assets-global.website-files.com/6171e9fea621c60456b9f9ad/62cc4c57a212fe57e2e0cbbb_road-to-web3.png";
         console.log(data)
         
@@ -44,10 +45,10 @@ const AddCourses = () => {
                         <label for="exampleFormControlFile1">Tutor Name :</label>
                         <input className="form-control" type="text" placeholder="Tutor Name" name='tutor_name' {...register("tutor_name")}></input>
                     </div>
-                    {/* <div>
+                    <div>
                         <label for="exampleFormControlFile1">Tutor Icon :</label>
                         <input className="form-control" type="file" name='tutor_icon' {...register("tutor_icon")}></input>
-                    </div> */}
+                    </div>
                     <div class="text-center">
                         <button type="submit" className="mt-2 btn btn-dark text-white">Submit</button>
                     </div>
