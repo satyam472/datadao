@@ -7,11 +7,9 @@ import Dashboard from './components/pages/Dashboard';
 import SignUp from './components/pages/SignUp';
 import addCourses from './components/pages/addCourses';
 import addVideos from './components/pages/addVideos';
-
 import MyCourses from "./components/pages/MyCourses"
-
 import courseDetails from './components/pages/courseDetails'
-
+import ModuleDetail from "./components/pages/ModuleDetail"
 
 function App() {
   return (
@@ -26,6 +24,7 @@ function App() {
           <Route path='/add-courses' component={addCourses} />
           <Route path='/add-videos' component={addVideos} />
           <Route path='/course-details' component={courseDetails} />
+          <Route path='/ModuleDetail' component={ModuleDetail} />
         </Switch>
       </Router>
     </>

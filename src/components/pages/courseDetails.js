@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const src = "https://www.youtube.com/embed/d15DP5zqnYE";
+const src = "https://youtu.be/-mJFZp84TIY";
 
-const courseDetails = () => {
+const courseDetails = (course) => {
+
+
     return (
         <>
             <div className="text-center sticky-top container-fluid bg-dark text-white">
@@ -23,15 +25,23 @@ const courseDetails = () => {
                     </hgroup>
                 </header>
 
-                <iframe
+                {/* <iframe
                     width="560"
                     height="315"
                     src={src}
                     title="Youtube Player"
                     frameborder="0"
-                    allowFullScreen
-                />
-
+                    // allowFullScreen
+                /> */}
+                {/* <img src='https://assets-global.website-files.com/6171e9fea621c60456b9f9ad/62cc4c57a212fe57e2e0cbbb_road-to-web3.png' width="560" height="315"></img> */}
+                <div className="card" style="width: 18rem;">
+                    <img src="https://assets-global.website-files.com/6171e9fea621c60456b9f9ad/62cc4c57a212fe57e2e0cbbb_road-to-web3.png" class="card-img-top" alt="img"></img>
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                    </div>
+                    </div>
                 <section>
 
                     <p>The Road to Web3 is a 10-week, self-paced program to bring you from Beginner to Advanced as a Web3 Blockchain Developer.</p>

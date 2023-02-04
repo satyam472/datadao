@@ -8,7 +8,6 @@ function MyCourses() {
   return (
     <>
       <MyCourseCard />
-      <Footer />
     </>
   );
 }

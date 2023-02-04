@@ -4,9 +4,24 @@ import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-
+  const[address,setAddress] = useState("");
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const handleConnectWallet = async()=>{
+
+    if(window.ethereum){
+      window.ethereum.request({method:'eth_requestAccounts'})
+      .then(res=>{
+              // Return the address of the wallet
+              setAddress(res[0]);
+              console.log("address = ",res[0])
+      });
+    }
+    else{
+      alert("install metamask extension!!")
+    }
+  }
 
 
   return (
@@ -60,7 +75,7 @@ function Navbar() {
           <Link to='/sign-up'>
           <button type="button" className="mb-2 mr-3 btn btn-light">Sign Up</button>
           </Link>
-          <button type="button" className="mb-2 btn btn-light">Connect Metamask</button>
+          <button type="button" onClick={handleConnectWallet} className="mb-2 btn btn-light">Connect Metamask</button>
         </div>
       </nav>
     </>
