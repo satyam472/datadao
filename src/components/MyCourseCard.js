@@ -60,7 +60,7 @@ function MyCourses() {
         </div>
             </div>
         </div>
-        <div className='col col-md-12'>
+        <div className='col col-md-12 mt-3'>
             <div className='purchased_cards'>
         <h1>Courses you purchased</h1>
         <div className='cards__container'>

@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>Welcome To DataDao</h1>
+      <h1>Welcome To Decentralized Education Platform</h1>
     </div>
   );
 }
